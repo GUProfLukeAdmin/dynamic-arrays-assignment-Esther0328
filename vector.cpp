@@ -14,22 +14,20 @@ void part1() {
     }
     
     //record the size and capacity
-    cout << "The size of the vector is: " << vec.size()
-        <<", the capacity of the vector is: " << vec.capacity()
+    cout << "After adding elements: Size = " << vec.size() 
+        << ", Capacity = " << vec.capacity()
         <<".\n";
 
     //resize to half its size
     vec.resize(vec.size()/2);
-    cout << "After resizing, " 
-        << "The size of the vector is: " << vec.size()
-        <<", the capacity of the vector is: " << vec.capacity()
+    cout << "After resizing, Size = " << vec.size() 
+        << ", Capacity = " << vec.capacity()
         <<".\n";
 
     //shrink to fit
     vec.shrink_to_fit();
-    cout << "After shrinking to fit,"
-        << "The size of the vector is: " << vec.size()
-        <<", the capacity of the vector is: " << vec.capacity()
+    cout << "After shrink_to_fit, Size = " << vec.size() 
+        << ", Capacity = " << vec.capacity()
         <<".\n";
     
 
@@ -48,8 +46,8 @@ void part2() {
     size_t charMemUsage = sizeof(charVec) + (charVec.capacity() * sizeof(char));
     
     //print result
-    cout << "Memory usage of bool vector is" << boolMemUsage << "bytes, \n"
-        << "Memory usage of char vector is" << charMemUsage << "bytes. \n ";
+    cout << "Memory usage of vector<bool>: " << boolMemUsage << "bytes\n"
+        << "Memory usage of vector<char>: " << charMemUsage << "bytes\n ";
 }
 
 int main() {
